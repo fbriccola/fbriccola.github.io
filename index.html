@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio de Francina</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Video de fondo en el Header -->
+    <header class="header">
+      <div class="video-fondo">
+        <video autoplay muted loop>
+          <source src="video1.mp4" id="#miVideo" type="video/mp4">
+          Tu navegador no soporta videos.
+        </video>
+        
+      </div>
+  
+      <div class="contenido-header">
+        <div class="container">
+          <h1 class="miFuente">FRANCINA BRICCOLA</h1>
+          <p class="miFuente">Bienvenido a mi Portfolio</p>
+        </div>
+      </div>
+    </header>
+  
+    <!-- Barra de menú desplazable -->
+    <div class="barra-menu">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#proyectos">Mis proyectos</a>
+        <a href="#certificaciones">Certificaciones</a>
+        <a href="#contacto">Contacto</a>
+
+    </div>
+
+    <!-- Barra negra entre el video y el resto de la página -->
+    <!-- Después de cada sección -->
+    <div class="separator"></div>
+
+    <!-- Barra de menú -->
+
+
+
+    <!-- El resto de contenido con fondo negro -->
+    <section id="sobre-mi" class="section sobre-mi" style="margin-bottom:50px">
+      <div class="container">
+        <h2 style="text-align: center; margin-top: 40px; color: rgb(15, 201, 15)">Sobre mí</h2>
+        <p>Hola, soy Francina, una estudiante de Ciencias de la Computación en la Facultad de Ciencias Exactas (UBA).  
+            Mi objetivo es incorporar nuevas herramientas, así como perfeccionar aquellas que ya poseo. Estoy interesada en expandir mi conocimiento y poder aplicar mi área de estudio en el día a día.</p>
+      </div>
+    </section>
+
+    <div class="separator"></div>
+  
+    <section id="proyectos" class="section proyectos" >
+      <div class="container" style="margin-bottom:50px">
+        <h2 style="text-align: center; margin-top: 30px; color: rgb(15, 201, 15)">Proyectos</h2>
+        <div class="proyectos-grid">
+          <!-- Proyecto 1 -->
+          <div class="proyecto">
+            <h3>1) Buscador de Cartas de Tarot</h3>
+            <p>Este proyecto inicialmente consistía en un simple buscador de cartas del tarot, en el cual al ingresar su nombre se generaba dinámicamente una página con una descripción breve del significado de la carta. Luego incorporé un chat-bot que realiza tiradas ofreciéndole al usuario diferentes áreas a consultar y tipos de tiradas predeterminados. Para este proyecto utilicé HTML, CSS, Javascript (con librerías como JQuery) y Node.js.</p>
+
+            <div class="contenedor-imagenes">
+                <img class="imagen-thumbnail" src="proyectos/buscador1.png" alt="Imagen 1">
+                <img class="imagen-thumbnail" src="proyectos/buscador2.png" alt="Imagen 2">
+                <img class="imagen-thumbnail" src="proyectos/buscador3.png" alt="Imagen 3">
+            </div>
+
+            <!-- Modal -->
+            <div id="modal" class="modal">
+                <span class="cerrar" onclick="cerrarModal()"></span>
+                
+                <!-- Flechas de navegación -->
+                <button class="flecha prev" onclick="cambiarImagen(-1)">&#10094;</button>
+                <button class="flecha next" onclick="cambiarImagen(1)">&#10095;</button>
+                
+                <!-- Imagen ampliada en el modal -->
+                <img class="modal-imagen" id="modal-imagen" src="" alt="Imagen ampliada">
+            </div>
+
+            <a href="https://github.com/franb23/tarot-dinamico"><p>Enlace al repositorio de GitHub</p></a>
+          </div>
+
+          <!-- Proyecto 2 -->
+          <div class="proyecto" style="margin-top: 20px; margin-bottom: 10px">
+            <h3>2) Relational Databases</h3>
+            <p>Estos proyectos pertenecen a un curso que realicé en el cual trabajé con el lenguaje SQL, Bash y PostgreSQL</p>
+
+            <a href="https://github.com/franb23/proyectos-fcc/tree/main/SQL"><p>Enlace al repositorio de GitHub</p></a>
+          </div>
+      </div>
+    </section>
+  
+
+    <div class="separator"></div>
+
+    <section id="certificaciones" class="section proyectos" >
+        <div class="container" style="margin-bottom:50px">
+          <h2 style="text-align: center; margin-top: 30px; color: rgb(15, 201, 15) ">Certificaciones</h2>
+          <div class="proyectos-grid">
+            <!-- Proyecto 1 -->
+            <div class="proyecto">
+              <h3 style="text-align: center;">Certificaciones de FreeCodeCamp</h3>
+              <p></p>
+  
+              <div class="contenedor-imagenes">
+                  <img class="imagen-thumbnail" src="certificaciones/certificacion1.png" alt="Imagen 1">
+                  <img class="imagen-thumbnail" src="certificaciones/certificacion2.png" alt="Imagen 2">
+                  
+              </div>
+  
+              <!-- Modal -->
+              <div id="modal" class="modal">
+                  <span class="cerrar" onclick="cerrarModal()">×</span>
+                  
+                  <!-- Flechas de navegación -->
+                  <button class="flecha prev" onclick="cambiarImagen(-1)">&#10094;</button>
+                  <button class="flecha next" onclick="cambiarImagen(1)">&#10095;</button>
+                  
+                  <!-- Imagen ampliada en el modal -->
+                  <img class="modal-imagen" id="modal-imagen" src="" alt="Imagen ampliada">
+              </div>
+  
+              
+            </div>
+            
+            <div class="separator" style="margin-top:50px"></div>
+
+    <section id="contacto" class="section contacto" style="margin-top: 50px">
+        <h2 style="text-align: center; color: rgb(15, 201, 15)">Contacto</h2>
+        <!-- Footer -->
+        <footer>
+          <div class="container">
+            
+            <p>
+
+              <a href="https://www.linkedin.com/in/francina-briccola-1194822ab/" target="_blank" class="icon-link">
+                <img src="317750_linkedin_icon.png" class="icon" alt="LinkedIn">
+              </a> 
+              <a href="https://github.com/franb23" target="_blank" class="icon-link">
+                <img src="github.png" class="icon" style="scale:120%" alt="GitHub">
+              </a>
+              <a href="mailto:fbriccola@dc.uba.ar" target="_blank" class="icon-link">
+                <img src="vecteezy_gmail-png-icon_16716465.png" class="icon" style="scale:100%" alt="GitHub">
+              </a>
+            </p>
+          </div>
+        </footer>
+      </section>
+      
+
+<script src="script.js"></script>
+</body>
+</html>

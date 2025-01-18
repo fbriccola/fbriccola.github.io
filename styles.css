@@ -1,0 +1,406 @@
+/* Estilos para el Header */
+/* Fuentes personalizadas */
+@font-face {
+    font-family: 'MiFuente';
+    src: url('DePixelBreit.otf') format('truetype');
+}
+
+.miFuente {
+    font-family: 'MiFuente';
+}
+
+body {
+    background-color: #010101;
+    margin: 0px;
+    padding: 0px;
+    size:auto;
+}
+
+* {
+    box-sizing: border-box; /* Incluye el padding y los bordes dentro del ancho de los elementos */
+  }
+
+.h1, h2, h3, h4, h5, p {
+    color: white;
+    font-family: miFuente;
+    padding: 8px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+header {
+  padding-top: 30px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  color: #050404;
+  height: 85vh;  /* 100% de la altura de la ventana */
+}
+
+/* Video de fondo */
+.video-fondo {
+    position: absolute; /* Asegura que el video esté posicionado correctamente */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra el video en el contenedor */
+    
+    width: 100%; /* Ancho completo del contenedor */
+    height: 100%; /* Altura completa del contenedor */
+    object-fit: cover; /* Hace que el video cubra todo el contenedor sin distorsionarse */
+    
+    z-index: -1; /* Coloca el video detrás del contenido */
+  }
+
+/* Video */
+video {
+  object-fit: cover;  /* Asegura que el video cubra todo el espacio sin distorsionarse */
+  transform: translate(0%, 0%); /* Centra el video en el contenedor */
+  width: 100%;
+  height: 105%;
+}
+
+/* Contenido dentro del header */
+.contenido-header {
+  position: relative;
+  z-index: 1;  /* Asegura que el contenido esté encima del video */
+  padding: 0px 0px;
+}
+
+header h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  padding-top: 30px;
+  color:#fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header p {
+  font-size: 1.5em;
+  padding-top: 270px;
+  margin-bottom: 20px;
+  color:#fff;
+  font-family: miFuente;
+}
+
+.btn-contacto {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff5733;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn-contacto:hover {
+  background-color: #e64a2a;
+}
+
+/* Barra de menú desplazable sobre el video pero debajo del header */
+.barra-menu {
+  position: static;
+  top: 100%; /* Lo coloca justo debajo del header */
+  left: 0;
+  width: 100%;
+  background-color: #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 100;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Enlaces de la barra de menú */
+.barra-menu a {
+  color: rgb(12, 228, 41);
+  text-decoration: none;
+  font-size: 22px;
+  padding: 5px 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-family: miFuente;
+}
+
+/* Efecto de agrandado y cambio de color al pasar el cursor */
+.barra-menu a:hover {
+  background-color: #000000;
+  transform: scale(1.1); /* Efecto de agrandado */
+}
+
+/* Estilos para el modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Imagen dentro del modal */
+.modal-imagen {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px; /* Bordes redondeados en la imagen del modal */
+  filter: none !important; /* Elimina el filtro de brillo en la imagen del modal */
+  transform: none !important; /* Elimina el efecto de agrandado */
+}
+
+/* Estilo del botón para cerrar el modal */
+.cerrar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Estilo de las flechas de navegación */
+.flecha {
+  position: absolute;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 30px;
+  padding: 16px;
+  cursor: pointer;
+  border: none;
+  transform: translateY(-50%);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+.flecha:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Contenedor de las imágenes */
+.contenedor-imagenes {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding: 0 30px;
+}
+
+/* Estilo de la miniatura de la imagen */
+.imagen-thumbnail {
+  width: 200px;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+/* Efecto hover para aumentar el brillo */
+.imagen-thumbnail:hover {
+  filter: brightness(1.2); /* Aumenta el brillo al pasar el cursor */
+}
+
+/* Estilos del pie de página */
+footer .container p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .container p .icon-link {
+  display: flex;
+  align-items: center;
+  margin: 0 15px;
+}
+
+footer .container p .icon {
+  width: 20px;
+  height: auto;
+  margin-right: 5px;
+}
+
+footer .container p .icon-link img {
+  width: 50px;
+  height: auto;
+}
+
+.separator {
+  background-image: radial-gradient(circle, rgb(78, 216, 73) 15%, transparent 10%);
+  background-size: 20px 100%;
+  height: 5px;
+  padding-top: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  header p {
+    font-size: 1.2em;
+  }
+
+  .barra-menu a {
+    font-size: 18px;
+  }
+
+  .contenedor-imagenes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imagen-thumbnail {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* Barra de menú en dispositivos móviles */
+  .barra-menu {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  .barra-menu a {
+    font-size: 18px;
+    padding: 10px 0;
+  }
+
+  .barra-menu a:hover {
+    transform: scale(1.05);
+  }
+
+  /* Menú desplegable en pantallas pequeñas */
+  .menu-icon {
+    display: none; /* Oculto por defecto */
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .menu-links.active {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .menu-links a {
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+    color: #fff;
+  }
+
+  .menu-links a:hover {
+    background-color: #333;
+  }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-contenido {
+    position: relative;
+}
+
+.modal-imagen {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+.cerrar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.video-container {
+    position: cover;
+  }
+  
+  /* Video */
+  #miVideo {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    display: absolute;  /* Muestra el video de forma predeterminada */
+  }
+  
+
+/* Estilos generales */
+.video-fondo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    width: 100%; /* El video ocupa el 100% del ancho */
+    height: 100%; /* El video ocupa el 100% de la altura */
+    object-fit: cover; /* Asegura que el video cubra el contenedor sin distorsionarse */
+    
+    z-index: -1; /* Coloca el video detrás del contenido */
+  }
+  
+  /* Media query para pantallas más pequeñas (por ejemplo, tablets) */
+
+  
+  /* Media query para pantallas muy pequeñas (por ejemplo, teléfonos) */
+  @media (max-width: 480px) {
+    .video-fondo {
+      width: 100%; /* El video ocupa todo el ancho */
+      height: 67%; /* Ajusta la altura para que no quede demasiado grande en móviles */
+    }
+  }
+
+  @media (max-width: 480px) {
+    header {
+      height: 500px; /* Limita la altura del header en pantallas más pequeñas */
+      padding-bottom: 0px;
+      margin-bottom: none;
+    }
+  }
+  
+    
+@media (max-width: 480px) {
+    barra-menu {
+     padding-top: 0px;
+     margin-top: none;
+     top: 100%
+    }
+   
+  }
+  
