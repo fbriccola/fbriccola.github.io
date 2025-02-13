@@ -33,7 +33,7 @@ header {
   position: relative;
   overflow: hidden;
   text-align: center;
-  color: #050404;
+  color: #111111;
   height: 85vh;  /* 100% de la altura de la ventana */
 }
 
@@ -122,7 +122,7 @@ header p {
 
 /* Efecto de agrandado y cambio de color al pasar el cursor */
 .barra-menu a:hover {
-  background-color: #000000;
+  background-color: #111111;
   transform: scale(1.1); /* Efecto de agrandado */
 }
 
